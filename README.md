@@ -1,0 +1,1 @@
+# nox-bitcoin-challenge
