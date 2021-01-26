@@ -14,13 +14,16 @@ def orderbook():
 @app.route('/nox/precomercado/<volume>&<tipo>', methods=['GET'])
 def precomercado(volume, tipo):
     precoAtual = list()
-    precoAtual = libnox.preco_Bitcoin(float(volume), str(tipo))
-    return jsonify(
-        tipo=tipo,
-        volume=float(volume),
-        valor_bitcoin=precoAtual[0],
-        valor_volume=precoAtual[1]
-    )
+    try:
+        precoAtual = libnox.preco_Bitcoin(float(volume), str(tipo))
+        return jsonify(
+            tipo=tipo,
+            volume=float(volume),
+            valor_bitcoin=precoAtual[0],
+            valor_volume=precoAtual[1]
+        )
+    except:
+        return jsonify(erro='ERRO Calculo de Preco de Mercado Estimado')
 
 
 app.run(host="0.0.0.0", port = 2000, debug = False)
