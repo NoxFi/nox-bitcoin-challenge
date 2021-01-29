@@ -10,7 +10,7 @@
 	1.1 - Execução da API
 	COMANDO: ..\NoxBitcoin\code\venv\Scripts\python.exe ../NoxBitcoin/code/api_valor_bitcoin.py
 	
-	1.2 - Abrir o Browser \ Navegador (hrome, Internet Explorer, Microsoft Edge etc.) e inserir o endereço
+	1.2 - Abrir o Browser \ Navegador (Chrome, Internet Explorer, Microsoft Edge etc.) e inserir o endereço
 	abaixo:
 	ENDEREÇO: http://localhost:2000/nox/orderbook/
 	
